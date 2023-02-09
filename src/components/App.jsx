@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
 import { ContactForm } from 'components/ContactForm/ContactForm';
@@ -41,9 +41,7 @@ export const App = () => {
   };
 
   const handleInputChange = e => {
-    setFilter({
-      [e.currentTarget.name]: e.currentTarget.value,
-    });
+    setFilter(e.target.value);
   };
 
   const getVisibleContacts = () => {
